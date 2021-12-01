@@ -9,7 +9,8 @@
     "install": "npm run install-server && npm run install-client",
     "server": "npm run dev --prefix server",
     "client": "npm start --prefix client",
-    "dev": "npm run server & npm run client",
+    "devMac": "npm run server & npm run client",
+    "dev":"concurrently --kill-others \"npm run server\" \"npm run client\"",
     "deploy": "npm run build --prefix client && npm start --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix client"
   },
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/taibuharoub/nasa-project/issues"
   },
-  "homepage": "https://github.com/taibuharoub/nasa-project#readme"
+  "homepage": "https://github.com/taibuharoub/nasa-project#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
 }
