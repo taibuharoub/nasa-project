@@ -7,13 +7,17 @@ const launch = {
   mission: "Kepler Exoplanet X",
   rocket: "Explorer IS1",
   launchDate: new Date("December 17, 2030"),
-  destination: "Kepler-442 b",
-  customer: ["NASA", "SpaceX", "JAXA"],
+  target: "Kepler-442 b",
+  customers: ["NASA", "SpaceX", "JAXA"],
   upcoming: true,
   success: true,
 };
 
 launches.set(launch.flightNumber, launch);
+
+function existsLanuchWithId(launchId) {
+  return launches.has(launchId);
+}
 
 //launches.values() returns an iterator
 function getAllLaunches() {
@@ -26,14 +30,23 @@ function addNewLaunch(launch) {
     lastestFlightNumber,
     Object.assign(launch, {
       success: true,
-      customer: ["SpaceX", "NASA"],
+      customers: ["SpaceX", "NASA"],
       upcoming: true,
       flightNumber: lastestFlightNumber,
     })
   );
 }
 
+function abortLaunchById(launchId) {
+  const aborted = launches.get(launchId);
+  aborted.upcoming = false;
+  aborted.success = false;
+  return aborted;
+}
+
 module.exports = {
   getAllLaunches,
   addNewLaunch,
+  existsLanuchWithId,
+  abortLaunchById,
 };

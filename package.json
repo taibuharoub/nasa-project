@@ -12,7 +12,7 @@
     "devMac": "npm run server & npm run client",
     "dev":"concurrently --kill-others \"npm run server\" \"npm run client\"",
     "deploy": "npm run build --prefix client && npm start --prefix server",
-    "test": "npm run test --prefix server && npm run test --prefix client"
+    "test": "npm test --prefix server && npm test --prefix client"
   },
   "repository": {
     "type": "git",
