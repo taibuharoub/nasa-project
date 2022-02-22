@@ -1,6 +1,7 @@
 const request = require("supertest");
 
 const app = require("../../app");
+const { loadPLanetsData } = require("../../models/planets.model");
 const { mongoConnect, mongoDisconnect } = require("../../services/mongo");
 
 describe("Launches API", () => {
@@ -8,6 +9,7 @@ describe("Launches API", () => {
   // our tests are running on the live database
   beforeAll(async () => {
     await mongoConnect();
+    await loadPLanetsData();
   });
 
   afterAll(async () => {
