@@ -1,4 +1,7 @@
-const API_URL = "http://localhost:8000/v1";
+// const API_URL = "http://localhost:8000/v1";
+// optimized for docker, here our client will know that it should make requests to the api
+// thats living on the same address at the same origin as the frontend
+const API_URL = "v1";
 
 async function httpGetPlanets() {
   // Load planets and return as JSON.
