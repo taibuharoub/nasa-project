@@ -1,4 +1,4 @@
-<h1 align="center">Nasa Project </h1>
+<h1 align="center">Welcome to nasa-project 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/taibuharoub/nasa-project#readme" target="_blank">
@@ -12,9 +12,21 @@
   </a>
 </p>
 
-> Nasa Mission Control API Targeting Kepler Exoplanets
+> Targeting Kepler Planets
 
 ### 🏠 [Homepage](https://github.com/taibuharoub/nasa-project#readme)
+
+## Install
+
+```sh
+npm install
+```
+
+## Run tests
+
+```sh
+npm run test
+```
 
 ## Author
 
