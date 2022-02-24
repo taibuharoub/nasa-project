@@ -9,8 +9,7 @@ describe("Launches API", () => {
   // our tests are running on the live database
   beforeAll(async () => {
     await mongoConnect();
-    // await loadPLanetsData();
-    // await loadPLanetsData();
+    await loadPLanetsData();
   });
 
   afterAll(async () => {
